@@ -1,0 +1,1 @@
+sum(digits(factorial(BigInt(100))))

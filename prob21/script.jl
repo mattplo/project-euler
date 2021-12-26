@@ -5,8 +5,12 @@ function d(n::Int)
         sum += 1
     end
     for k = 2:max_divisor
-        if n % k == 0
-            sum += k + n ÷ k
+        q, r = n ÷ k, n % k
+        if r == 0
+            sum += k
+            if k != q
+                sum += q
+            end
         end
     end
     sum
